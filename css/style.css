@@ -25,7 +25,11 @@ header i {
     margin: 5px;
     color: #B1B1B1;
 }
-
+header {
+    height: 10%;
+    background-color: #EAEAEA;
+    width: 100%;
+}
 
 
 
@@ -47,16 +51,13 @@ body {
     background: white;
     
 }
+/* Parte laterale sinistra della pagina inn cui ci sono tutte le conversazioni */
 .side {
     width: 37%;
     height: 100%;
     background: red;
 }
-header {
-    height: 10%;
-    background-color: #EAEAEA;
-    width: 100%;
-}
+
 .side-header {
     justify-content: space-between;
     padding: 15px;
@@ -136,7 +137,7 @@ header {
 }
 
 
-
+/* Parte centrale dove si vede la chat */
 
 
 .main-content {
@@ -148,7 +149,47 @@ header {
 .chat {
     background-image: url('../img/mine.jpg') ;
     flex-grow: 1;
+    padding: 25px 30px 0;
 }
+
+.mex {
+    width: 200px;
+    min-height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+.white {
+    background: white;
+    float: left;
+}
+.green {
+    background: #D5F7BB;
+    float: right;
+}
+.message {
+    margin-bottom:20px;
+}
+.message::after {
+        content: "";
+        display: table;
+        clear: both;
+    
+}
+.chat span {
+    font-size: 10px;
+    position: absolute;
+    bottom: 2px;
+    right: 8px;
+}
+i.fa-paper-plane {
+    display: none;
+}
+
+
+
+
+/* FOOTER PARTE DESTRA */
 .chat-footer {
     background:#F3EEEB;
     height: 50px;
@@ -178,4 +219,9 @@ header {
     margin-top: 5px;
     color: grey;
     font-size: 85%;
+}
+
+/* Templates */
+.template {
+    display: none;
 }
