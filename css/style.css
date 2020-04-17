@@ -131,11 +131,51 @@ header {
     color: lightgrey;
    
 }
+.contacts:hover {
+    background: #EAEBEB;
+}
+
+
 
 
 
 .main-content {
     width: 63%;
     height: 100%;
-    background: blue;
+    display: flex;
+    flex-direction: column;
+}
+.chat {
+    background-image: url('../img/mine.jpg') ;
+    flex-grow: 1;
+}
+.chat-footer {
+    background:#F3EEEB;
+    height: 50px;
+    justify-content: space-between;
+    padding: 20px;
+}
+.chat-footer input {
+    flex-grow: 1;
+    height: 40px;
+}
+.chat-footer input:focus, 
+.chat-footer input:hover {
+    background:gold;
+}
+.chat-footer i {
+    font-size: 20px;
+    margin: 10px;
+}
+.main-header {
+    justify-content: space-between;
+    padding: 20px;
+}
+.info {
+    margin-left: 20px;
+}
+.info p {
+    margin-top: 5px;
+    color: grey;
+    font-size: 85%;
 }
