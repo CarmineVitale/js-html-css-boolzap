@@ -8,13 +8,50 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
-<body>
-<div class="container">
+<body class="u-flex-center">
+<div class="container u-flex">
     <div class="side">
-        <header class="side-header"></header>
+        <header class="side-header u-flex">
+            <div class="user-image">
+                <img class="user" src="img/avatar_io.jpg" alt="">
+            </div>
+            <div class="side-header-icon">
+                <i class="fas fa-circle-notch"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </header>
+        <div class="notifications u-flex">
+            <i class="fas fa-bell-slash"></i>
+            <div class="desktop-notifications">
+                <p>Ricevi notifiche di nuovi messaggi</p>
+                <p>Attiva notifiche desktop</p>
+            </div>
+        </div>
+        <div class="search u-flex">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
+        <div class="chat-list">
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+            <div class="contacts"></div>
+        </div>
     </div>
     <div class="main-content">
-        <header class="main-header"></header>
+        <header class="main-header">
+            <div>
+                <i class="fas fa-search"></i>
+                <i class="fas fa-paperclip"></i>
+                <i class="fas fa-ellipsis-v"></i>
+
+            </div>
+        </header>
         <section class="chat"></section>
         <footer class="chat-footer"></footer>
     </div>
