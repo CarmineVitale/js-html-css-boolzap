@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-   var clone = $('.template .message').clone();
+   var clone;
    var nuovoMex = $('input.input');
 
 
@@ -14,7 +14,7 @@ $(document).ready(function () {
 $('body').on('keyup', nuovoMex, function(e){
    if (e.keyCode == 13) {
 
-   
+      clone = $('.template .message').clone();
       var textMex = nuovoMex.val();
       clone.find('p').text(textMex);
       
@@ -25,7 +25,7 @@ $('body').on('keyup', nuovoMex, function(e){
 $('body').on('click', '.fa-paper-plane', function(e){
    
 
-   
+      clone = $('.template .message').clone();
       var textMex = nuovoMex.val();
       clone.find('p').text(textMex);
       

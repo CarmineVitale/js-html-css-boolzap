@@ -151,6 +151,7 @@ body {
     background-image: url('../img/mine.jpg') ;
     flex-grow: 1;
     padding: 25px 30px 0;
+    overflow-y: auto;
 }
 
 .mex {
@@ -171,6 +172,9 @@ body {
 .message {
     margin-bottom:20px;
 }
+/* .message p {
+    overflow-wrap: break-word;
+} */
 .message::after {
         content: "";
         display: table;
