@@ -18,16 +18,18 @@ $(document).ready(function () {
    
   
    //Invio messaggio alla pressione del tasto INVIA
-$('body').on('keyup', nuovoMex, function(e){
+
+nuovoMex.keyup(function (e) { 
    if (e.keyCode == 13) {
       aggiungiChat()
    }
 });
    //Invio messaggio al click dell'icona "send"
-$('body').on('click', '.chat-footer i.fas', function(e){
-      aggiungiChat()
-});
 
+$('.chat-footer i.fas').click(function (e) { 
+   aggiungiChat();
+   
+});
 
 
 /******************************************* 
@@ -54,7 +56,7 @@ Funzioni
    $('.chat-intera.active').append(clone);
    nuovoMex.val('');
 
-   setTimeout(bot, 3000);
+   setTimeout(bot, 1000);
    
   }; 
 
