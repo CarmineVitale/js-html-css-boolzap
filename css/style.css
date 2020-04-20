@@ -167,10 +167,18 @@ body {
 .white {
     background: white;
     float: left;
+    width: 200px;
+    min-height: 30px;
+    border-radius: 20px;
+    text-align: center;
 }
 .green {
     background: #D5F7BB;
     float: right;
+    width: 200px;
+    min-height: 30px;
+    border-radius: 20px;
+    text-align: center;
 }
 .message {
     margin-bottom:20px;

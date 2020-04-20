@@ -3,17 +3,19 @@ $(document).ready(function () {
 
    var clone;
    var nuovoMex = $('input.input');
+   var icon = $('.chat-footer i.fas');
 
    //Cambio icona da microfono a "send"
    $('input.input').focus(function () { 
       
-      $('.fa-microphone').toggleClass('fa-paper-plane');
+      icon.toggleClass('fa-microphone fa-paper-plane');
        
    }).blur(function () { 
       
-      $('.fa-microphone').toggleClass('fa-paper-plane');
+      icon.toggleClass('fa-microphone fa-paper-plane');
        
    });
+   
   
    //Invio messaggio alla pressione del tasto INVIA
 $('body').on('keyup', nuovoMex, function(e){
@@ -47,11 +49,14 @@ Funzioni
    
    clone.find('span').text(orario);
    
-   $('.chat').append(clone);
+   clone.addClass('green');
+
+   $('.chat-intera.active').append(clone);
    nuovoMex.val('');
-   }
+
+   setTimeout(bot, 3000);
    
-   
+  }; 
 
 //aggiunta dello zero per minuti inferiori a 10
 function aggiungiZero(num) {
@@ -61,7 +66,20 @@ function aggiungiZero(num) {
    return num;
 };
   
-  
+function bot() {
+   clone =  $('.template .message').clone();
+   var botMex = 'Ok';
+   var data = new Date();
+   var ora = aggiungiZero(data.getHours());
+   var minuti = aggiungiZero(data.getMinutes());
+   var orario = ora + ':' + minuti;
+ 
+   clone.find('p').text(botMex);
+   clone.find('span').text(orario);
+   clone.addClass('white');
+   $('.chat-intera.active').append(clone)
+ 
+};
   
   
 
