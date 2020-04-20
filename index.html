@@ -6,7 +6,7 @@
     <title>Whatsapp Web</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body class="u-flex-center">
 
@@ -31,11 +31,11 @@
             </div>
         </div>
         <div class="search u-flex-align-center">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <label for="search-input"> <i class="fas fa-search"></i></label>
+            <input type="text" id="search-input" placeholder="Cerca o inizia una nuova chat">
         </div>
         <div class="chat-list">
-            <div class="contacts u-flex">
+            <div class="contacts u-flex active" data-conversazione="0">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_1.jpg" alt="">
                     <div class="user-chat">
@@ -47,7 +47,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex"  data-conversazione="1">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_2.jpg" alt="">
                     <div class="user-chat">
@@ -62,7 +62,7 @@
 
 
 
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="2">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_3.jpg" alt="">
                     <div class="user-chat">
@@ -74,7 +74,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="3">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_4.jpg" alt="">
                     <div class="user-chat">
@@ -86,7 +86,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="4">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_5.jpg" alt="">
                     <div class="user-chat">
@@ -98,7 +98,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="5">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_6.jpg" alt="">
                     <div class="user-chat">
@@ -110,7 +110,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="6">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_7.jpg" alt="">
                     <div class="user-chat">
@@ -122,7 +122,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="7">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_7.jpg" alt="">
                     <div class="user-chat">
@@ -134,7 +134,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="8">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_7.jpg" alt="">
                     <div class="user-chat">
@@ -146,7 +146,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="9">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_7.jpg" alt="">
                     <div class="user-chat">
@@ -158,7 +158,7 @@
                     <p>17:53</p>
                 </div>
             </div>
-            <div class="contacts u-flex">
+            <div class="contacts u-flex" data-conversazione="10">
                 <div class="u-flex-align-center">
                     <img class="user" src="img/avatar_8.jpg" alt="">
                     <div class="user-chat">
@@ -194,28 +194,82 @@
         </header>
 
         <section class="chat">
-            <div class="message">
-                <div class="mex green">
-                    <p>Ciao come stai?</p>
-                    <span>07:00</span>
+            <div class="chat-intera active"  data-conversazione="0">
+                <div class="message">
+                    <div class="mex green">
+                        <p>Ciao come stai?</p>
+                        <span>07:00</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Bene tu?</p>
+                        <span>07:01</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex green">
+                        <p>Anche io. Ciao.</p>
+                        <span>07:05</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Ciao.</p>
+                        <span>07:08</span>
+                    </div>
                 </div>
             </div>
-            <div class="message">
-                <div class="mex white">
-                    <p>Bene tu?</p>
-                    <span>07:01</span>
+            <div class="chat-intera"  data-conversazione="1">
+                <div class="message">
+                    <div class="mex green">
+                        <p>Ciao come stai?</p>
+                        <span>07:00</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Bene tu?</p>
+                        <span>07:01</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex green">
+                        <p>Anche io. Ciao.</p>
+                        <span>07:05</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Ciao.</p>
+                        <span>07:08</span>
+                    </div>
                 </div>
             </div>
-            <div class="message">
-                <div class="mex green">
-                    <p>Anche io. Ciao.</p>
-                    <span>07:05</span>
+            <div class="chat-intera"  data-conversazione="2">
+                <div class="message">
+                    <div class="mex green">
+                        <p>Ciao come stai?</p>
+                        <span>07:00</span>
+                    </div>
                 </div>
-            </div>
-            <div class="message">
-                <div class="mex white">
-                    <p>Ciao.</p>
-                    <span>07:08</span>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Bene tu?</p>
+                        <span>07:01</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex green">
+                        <p>Anche io. Ciao.</p>
+                        <span>07:05</span>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="mex white">
+                        <p>Ciao.</p>
+                        <span>07:08</span>
+                    </div>
                 </div>
             </div>
 
@@ -236,7 +290,7 @@
     <div class="message">
         <div class="mex green">
             <p></p>
-            <span>07:10</span>
+            <span></span>
         </div>
     </div>
 </div>

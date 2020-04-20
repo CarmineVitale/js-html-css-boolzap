@@ -115,11 +115,12 @@ body {
     width: 100%;
     height: 74%;
     background: white;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .contacts {
     width: 100%;
-    height: calc(100% / 9);
+    /* height: calc(100% / 9); */
+    flex-grow: 1;
     background: white;
     border-top: 1px solid #DBDBD3;
     padding: 15px 20px;
@@ -136,7 +137,9 @@ body {
 .contacts:hover {
     background: #EAEBEB;
 }
-
+.chat-list .active {
+    background: #87b0f2;
+} 
 
 /* Parte centrale dove si vede la chat */
 
@@ -171,16 +174,19 @@ body {
 }
 .message {
     margin-bottom:20px;
+    clear: both;
 }
+
 /* .message p {
     overflow-wrap: break-word;
 } */
-.message::after {
+
+/* .message::after {
         content: "";
         display: table;
         clear: both;
     
-}
+} */
 .chat span {
     font-size: 10px;
     position: absolute;
@@ -192,7 +198,14 @@ body {
 } */
 
 
+/* Conversazioni */
+.chat-intera {
+    display: none;
+}
 
+.chat-intera.active {
+    display: block;
+}
 
 /* FOOTER PARTE DESTRA */
 .chat-footer {
@@ -204,6 +217,9 @@ body {
 .chat-footer input {
     flex-grow: 1;
     height: 40px;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
 }
 .chat-footer input:focus, 
 .chat-footer input:hover {
@@ -212,6 +228,7 @@ body {
 .chat-footer i {
     font-size: 20px;
     margin: 10px;
+    cursor: pointer;
 }
 .main-header {
     justify-content: space-between;
@@ -230,3 +247,6 @@ body {
 .template {
     display: none;
 }
+
+
+
