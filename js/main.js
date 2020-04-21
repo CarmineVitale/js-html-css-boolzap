@@ -74,10 +74,11 @@ search.keyup(function () {
 
 $('.fa-angle-down').click( function() {
 
-   
    $(this).next('.dropdown').toggle();
+   
 
 });
+
 //cancellazione messaggio 
 $('a.delete').click( function() {
    $(this).parents('.message').remove();
@@ -169,11 +170,3 @@ function aggiungiZero(num) {
 
 
 
-//Seleziono chat da vedere con click su contatto cor
-$('.contacts').click(function () { 
-   var user = $(this).attr('data-conversazione');
-    //resetto classe active
-$('.chat-intera').removeClass('active');
-
-$('.chat-intera[data-conversazione= "' + user + '" ]').addClass('active');
-});
