@@ -27,26 +27,26 @@ $('.chat-intera[data-conversazione= "' + user + '" ]').addClass('active');
 
 
 
-   //Cambio icona da microfono a "send"
-   $('input.input').focus(function () { 
+//Cambio icona da microfono a "send"
+$('input.input').focus(function () { 
+      
+   icon.toggleClass('fa-microphone fa-paper-plane');
+       
+}).blur(function () { 
       
       icon.toggleClass('fa-microphone fa-paper-plane');
        
-   }).blur(function () { 
-      
-      icon.toggleClass('fa-microphone fa-paper-plane');
-       
-   });
+});
    
   
-   //Invio messaggio alla pressione del tasto INVIA
+//Invio messaggio alla pressione del tasto INVIA
 
 nuovoMex.keyup(function (e) { 
    if (e.keyCode == 13) {
       aggiungiChat()
    }
 });
-   //Invio messaggio al click dell'icona "send"
+//Invio messaggio al click dell'icona "send"
 
 $('.chat-footer i.fas').click(function (e) { 
    aggiungiChat();
@@ -68,6 +68,21 @@ search.keyup(function () {
     });
    
 })
+
+//Opzioni dropdown menu su messaggio
+
+
+$('.fa-angle-down').click( function() {
+
+   
+   $(this).next('.dropdown').toggle();
+
+});
+//cancellazione messaggio 
+$('a.delete').click( function() {
+   $(this).parents('.message').remove();
+   
+});
 
 
 /******************************************* 

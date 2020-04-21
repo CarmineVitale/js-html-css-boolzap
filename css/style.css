@@ -251,6 +251,52 @@ body {
     font-size: 85%;
 }
 
+/* icona */
+.mex p {
+    position: relative;
+}
+i.fa-angle-down {
+    position:absolute;
+    top: 2px;
+    right: 14px;
+    opacity: 0;
+}
+
+.message:hover i {
+    opacity: 1;
+    cursor: pointer;
+} 
+ .dropdown {
+    background: white;
+    position:absolute;
+    top: 19px;
+    right: 0px;
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+    width: 100px;
+    height: 50px;
+} 
+.menu {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+.mex ul li {
+    list-style: none;
+}
+.mex ul li a {
+    text-decoration: none;
+    color: grey;
+}
+.mex ul li a:hover {
+   
+    color:black;
+}
+
+
 /* Templates */
 .template {
     display: none;
