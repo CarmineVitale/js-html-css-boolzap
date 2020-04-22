@@ -73,15 +73,22 @@ search.keyup(function () {
 
 
 $('.fa-angle-down').click( function() {
-
-   $(this).next('.dropdown').toggle();
-   
+  
+   $(this).next('.dropdown').toggleClass('active');
+  
+  
 
 });
 
 //cancellazione messaggio 
 $('a.delete').click( function() {
    $(this).parents('.message').remove();
+   
+});
+$('a.all-del').click( function() {
+   
+   
+   $(this).parents('.message').find('p:first-of-type').html('<p style="color:grey; font-size:12px;"> <em>Il messaggio è stato eliminato </em> </p>');
    
 });
 

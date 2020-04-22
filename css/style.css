@@ -33,6 +33,7 @@ header {
 
 
 
+
 body {
     height: 100vh;
     font-family: 'Lato', sans-serif;
@@ -214,6 +215,7 @@ i.fa-angle-down {
     opacity: 1;
     cursor: pointer;
 } 
+
  .dropdown {
     background: white;
     position:absolute;
@@ -225,8 +227,11 @@ i.fa-angle-down {
     display: none;
     z-index: 10;
     width: 150px;
-    height: 40px;
+   
 } 
+.dropdown.active {
+    display: block;
+}
 .menu {
     position: absolute;
     top: 3px;
