@@ -73,9 +73,11 @@ search.keyup(function () {
 
 
 $('.fa-angle-down').click( function() {
-  
+
+
+   $('.fa-angle-down').next().not($(this).next('.dropdown')).removeClass('active');
    $(this).next('.dropdown').toggleClass('active');
-  
+ 
   
 
 });
